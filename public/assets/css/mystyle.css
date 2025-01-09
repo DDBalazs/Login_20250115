@@ -1,0 +1,18 @@
+.navbar-dark {
+    --bs-navbar-color: rgb(255, 255, 255);
+    --bs-navbar-hover-color: rgb(170, 170, 170);
+    --bs-navbar-brand-color: rgba(255, 255, 255);
+    --bs-navbar-brand-hover-color: rgba(170, 170, 170);
+  }
+
+  .fa-solid, 
+  .fa-cart-shopping, 
+  .fa-user, 
+  .fa-right-to-bracket{
+    color: rgb(255, 255, 255);
+  }
+  .fa-cart-shopping:hover, 
+  .fa-user:hover, 
+  .fa-right-to-bracket:hover{
+    color: rgb(170, 170, 170);
+  }
