@@ -10,9 +10,9 @@
                     @if ($errors->any())
                         <span class="text-danger">Adja meg minkét mező adadtát!</span>
                     @endif
-                    @if (isset($sv))
+                    @isset ($sv)
                         <span class="text-danger">A név vagy a jelszó nem egyezik!</span>
-                    @endif
+                    @endisset
                     <div class="py-2">
                         <label for="name" class="form-label">Felhasználónév:</label>
                         <input type="text" id="name" name="name" class="form-control">

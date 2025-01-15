@@ -11,3 +11,10 @@ Route::post('/reg', [UserController::class, 'Reg']);
 #login
 Route::view('/login', 'login');
 Route::post('login', [UserController::class, 'Login']);
+#logout
+Route::get('/logout', [UserController::class, 'Logout']);
+#Profiloldal
+Route::get('/mypage', [UserController::class, 'Profiloldal']);
+#Új jelszó
+Route::get('/newpass', [UserController::class, 'Newpass']);
+Route::post('/newpass', [UserController::class, 'NewpassData']);

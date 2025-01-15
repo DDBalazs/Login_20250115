@@ -27,6 +27,7 @@
           </ul>
           <div class="ms-auto">
             @auth
+            <span class="text-white">Szia {{Auth::user()->name}}</span>
             <a class="fs-4 me-2" href="/mypage"><i class="fa-solid fa-user"></i></a>
             <a class="fs-4 me-2" href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
             @else
@@ -38,7 +39,7 @@
     </div>
 
     @yield('content')
-    
+
 <footer class="container text-center">
     <hr>
     <p>Csőke Balázs Zsolt 13.A / 2025.01.08</p>
