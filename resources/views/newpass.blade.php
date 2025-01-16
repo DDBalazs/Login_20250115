@@ -4,6 +4,9 @@
     <main class="container pb-2">
         <h1 class="text-center display-6 py-3">Jelszó módosítás</h1>
         <div class="card mx-auto" style="width: 30rem">
+            @isset($sv)
+                <p class="text-succes">{{$sv}}</p>
+             @endisset
             <div class="card-body">
                 <form action="/newpass" method="POST">
                     @csrf

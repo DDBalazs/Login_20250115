@@ -14,7 +14,7 @@ Route::post('login', [UserController::class, 'Login']);
 #logout
 Route::get('/logout', [UserController::class, 'Logout']);
 #Profiloldal
-Route::get('/mypage', [UserController::class, 'Profiloldal']);
+Route::get('/mypage', [UserController::class, 'Mypage']);
 #Új jelszó
 Route::get('/newpass', [UserController::class, 'Newpass']);
 Route::post('/newpass', [UserController::class, 'NewpassData']);
