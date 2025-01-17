@@ -18,3 +18,6 @@ Route::get('/mypage', [UserController::class, 'Mypage']);
 #Új jelszó
 Route::get('/newpass', [UserController::class, 'Newpass']);
 Route::post('/newpass', [UserController::class, 'NewpassData']);
+#Törlés
+Route::get('/del', [UserController::class, 'Del']);
+Route::get('/exit', [UserController::class, 'Exit']);

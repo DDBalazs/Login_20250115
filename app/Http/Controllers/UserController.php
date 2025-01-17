@@ -83,12 +83,13 @@ class UserController extends Controller
                                                                     ->letters()
                                                                     ->numbers()
                                                                     ->mixedCase()],
-            'newpassword_confirmation'  => 'requiered'
+            'newpassword_confirmation'  => 'required'
         ],[
-            'oldpassword.requiered'                 => 'Kötelező megadni!',
-            'newpassword.requiered'                 => 'Kötelező megadni!',
+            'oldpassword.required'                  => 'Kötelező megadni!',
+            'newpassword.required'                  => 'Kötelező megadni!',
             'newpassword.confirmed'                 => 'Nem egyezik a kettő jelszó!',
-            'newpassword.confirmed.requiered'       => 'Kötelező megadni!',
+            'newpassword.confirmed.required'        => 'Kötelező megadni!',
+            'newpassword_confirmation.required'     => 'Kötelező megadni!',
             'newpassword.min'                       => 'Minimum 8 karakter hosszú legyen!',
             'newpassword.mixed'                     => 'Kis és nagybetűket is kell tartalmazni!',
             'newpassword.numbers'                   => 'A jelszónak tartalmazni kell számot is!',
@@ -106,6 +107,27 @@ class UserController extends Controller
             return view('newpass', [
                 'sv'    => 'Nem sikerült megváltoztatni a jelszavát! :c'
             ]);
+        }
+    }
+
+    public function Del(){
+        if(Auth::check()){
+            return view('/del');
+        }
+        else{
+            return redirect('/login');
+        }
+    }
+
+    public function Exit(){
+        if(Auth::check()){
+            $data = User::find(Auth::user()->id);
+            $data->delete;
+            Auth::logout();
+            return redirect('/');
+        }
+        else{
+            return redirect('/login');
         }
     }
 }
